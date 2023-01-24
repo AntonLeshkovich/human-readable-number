@@ -70,7 +70,7 @@ module.exports = function toReadable (number) {
               }
           }
       }
-  } else if (number > 119 && arrNums[2] == 0) {
+  } else if (number > 119 && arrNums[1] !== 0 && arrNums[2] == 0) {
       for (let i = 0; i < arrWords.length; i++) {
           if (arrNums[0] == i) {
               for (j = 0; j < arrZeroEnd.length + 1; j++) {
