@@ -90,4 +90,3 @@ module.exports = function toReadable (number) {
 }
 
 // toReadable(997);
-console.log(module)
