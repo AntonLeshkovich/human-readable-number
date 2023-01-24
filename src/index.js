@@ -6,7 +6,7 @@ module.exports = function toReadable (number) {
   let arrWords = ['zero','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 
                   'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'
                   ];
-  let arrZeroEnd = ['ten', 'twenty', 'thirty', 'fourty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+  let arrZeroEnd = ['ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 
    if (number < 20) {
       for (let i = 0; i < arrWords.length; i++) {
@@ -55,7 +55,7 @@ module.exports = function toReadable (number) {
           if (arrNums[0] == i) {
               for (let j = 0; j < arrWords.length; j++) {
                   if (arrNums[2] == j) {
-                      return `${arrWords[i]} hundred and ${arrWords[j]}`
+                      return `${arrWords[i]} hundred ${arrWords[j]}`
                   }
               }
           }
@@ -65,7 +65,7 @@ module.exports = function toReadable (number) {
           if (arrNums[0] == i) {
               for (let j = 0; j < arrWords.length; j++) {
                   if (Number(arr[1] + arr[2]) == j) {
-                      return `${arrWords[i]} hundred and ${arrWords[j]}`
+                      return `${arrWords[i]} hundred ${arrWords[j]}`
                   }
               }
           }
